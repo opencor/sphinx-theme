@@ -1,7 +1,7 @@
 body {
     padding: 13px 0px 9px 0px;
-    /* Note: the padding is determined from the height of div.header and */
-    /*       div.copyright minus the same number of pixels each...       */
+    /* Note: the padding is determined from the height of h1 and   */
+    /*       div.copyright minus the same number of pixels each... */
     font-family: "Arial", "Sans-Serif";
     font-size: 10pt;
 }
