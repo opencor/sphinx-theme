@@ -32,6 +32,11 @@ code {
     color: rgb(103, 103, 103);
 }
 
+div.bad pre {
+    border: 1px solid rgba(149, 55, 52, 0.13);
+    background: rgba(149, 55, 52, 0.05);
+}
+
 div.copyright {
     position: fixed;
     bottom: 0px;
@@ -51,14 +56,14 @@ div.copyright div {
     bottom: 2px;
 }
 
-div.copyright div.left {
-    left: 4px;
-}
-
 div.copyright div.center {
     position: absolute;
     left: 50%;
     top: 50%;
+}
+
+div.copyright div.left {
+    left: 4px;
 }
 
 div.copyright div.right {
@@ -81,6 +86,11 @@ div.copyright div img.vpr {
     position: relative;
     top: 1px;
     border: 0px;
+}
+
+div.good pre {
+    border: 1px solid rgba(118, 146, 60, 0.13);
+    background: rgba(118, 146, 60, 0.05);
 }
 
 div.highlight {
@@ -125,16 +135,6 @@ img {
     vertical-align: middle;
 }
 
-div.good pre {
-    border: 1px solid rgba(118, 146, 60, 0.13);
-    background: rgba(118, 146, 60, 0.05);
-}
-
-div.bad pre {
-    border: 1px solid rgba(149, 55, 52, 0.13);
-    background: rgba(149, 55, 52, 0.05);
-}
-
 li > p {
     margin: 0px;
 }
@@ -152,6 +152,18 @@ table.highlighttable {
     border-spacing: 0px;
 }
 
+table.highlighttable > tbody > tr > td.code {
+    padding: 0px;
+    width: 100%;
+}
+
+table.highlighttable > tbody > tr > td.code > div.highlight > pre {
+    margin-left: 0px;
+    border-left: 0px;
+    border-radius: 0px 2px 2px 0px;
+    width: auto;
+}
+
 table.highlighttable > tbody > tr > td.linenos {
     padding: 0px;
     vertical-align: top;
@@ -163,18 +175,6 @@ table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
     padding: 3px 7px;
     background: rgba(103, 103, 103, 0.15);
     color: rgb(103, 103, 103);
-}
-
-table.highlighttable > tbody > tr > td.code {
-    padding: 0px;
-    width: 100%;
-}
-
-table.highlighttable > tbody > tr > td.code > div.highlight > pre {
-    margin-left: 0px;
-    border-left: 0px;
-    border-radius: 0px 2px 2px 0px;
-    width: auto;
 }
 
 ul {
