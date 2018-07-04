@@ -23,7 +23,8 @@ a.headerlink {
     display: none;
 }
 
-code, pre {
+code,
+pre {
     font-family: "Consolas", "Menlo", "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", "Monospace";
     font-size: 9pt;
 }
