@@ -6,6 +6,12 @@ body {
     font-size: 10pt;
 }
 
+span:empty:not([class]) {
+    display: block;
+    position: relative;
+    top: -34px;
+}
+
 a {
     color: rgb(103, 103, 103);
     outline: 0px;
