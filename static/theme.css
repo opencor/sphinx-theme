@@ -213,6 +213,10 @@ ul > li {
     margin-left: -1em;
 }
 
+ul.internal.reference > li > a.internal.reference {
+    font-weight: bold;
+}
+
 ul > li > ul {
     margin: 0px;
 }
