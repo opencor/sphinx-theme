@@ -213,7 +213,7 @@ ul > li {
     margin-left: -1em;
 }
 
-ul.internal.reference > li > a.internal.reference {
+ul.internal.reference > li > a.internal.reference:first-child {
     font-weight: bold;
 }
 
