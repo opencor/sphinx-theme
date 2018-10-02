@@ -15,28 +15,14 @@
 
         <link href="{{ pathto('_static/katex/katex.min.css', 1) }}" rel="stylesheet" type="text/css"/>
 
-        <script src="{{ pathto('_static/katex/katex.min.js', 1) }}" type="text/javascript"></script>
-        <script src="{{ pathto('_static/katex/contrib/auto-render.min.js', 1) }}" type="text/javascript"></script>
+        <script defer src="{{ pathto('_static/katex/katex.min.js', 1) }}" type="text/javascript"></script>
+        <script defer src="{{ pathto('_static/katex/contrib/auto-render.min.js', 1) }}" type="text/javascript" onload="renderMathInElement(document.body);"></script>
     </head>
     <body ondragstart="return false;" ondrop="return false;">
         {% block body %}
         {% endblock %}
 
         <script type="text/javascript">
-            var mathematicalEquations = document.getElementsByClassName("math");
-
-            for (i = 0; i < mathematicalEquations.length; ++i) {
-                renderMathInElement(mathematicalEquations[i],
-                                    {
-                                        delimiters: [
-                                            { left: "$$", right: "$$", display: true },
-                                            { left: "\\[", right: "\\]", display: true },
-                                            { left: "$", right: "$", display: false },
-                                            { left: "\\(", right: "\\)", display: false }
-                                        ]
-                                    });
-            }
-
             copyright("{{ pathto('_static', 1) }}");
         </script>
     </body>
