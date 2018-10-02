@@ -175,6 +175,10 @@ span:empty:not([class]) {
     top: -34px;
 }
 
+span.math {
+    color: rgb(103, 103, 103);
+}
+
 table.highlighttable {
     border-spacing: 0px;
 }
