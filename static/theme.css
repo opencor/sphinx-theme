@@ -24,8 +24,9 @@ a.headerlink {
 }
 
 a.image-reference {
-    margin: 0px;
+    margin: 0px auto;
     border: 0px;
+    display: table;
 }
 
 code,
@@ -142,9 +143,6 @@ img {
 }
 
 img.align-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     padding: 7px;
 }
 
