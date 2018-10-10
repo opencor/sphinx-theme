@@ -29,6 +29,10 @@ a.image-reference {
     display: table;
 }
 
+a.toolbar {
+    pointer-events: none;
+}
+
 code,
 pre {
     font-family: "Consolas", "Menlo", "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", "Monospace";
@@ -152,6 +156,10 @@ img.align-center:hover {
     border: 1px solid rgba(103, 103, 103, 0.13);
     border-radius: 7px;
     background: rgba(103, 103, 103, 0.05);
+}
+
+img.toolbar {
+    padding: 3px 13px;
 }
 
 li > p {
