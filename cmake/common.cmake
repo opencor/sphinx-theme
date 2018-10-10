@@ -26,17 +26,6 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
         message(FATAL_ERROR "Sphinx ${MINIMUM_SPHINX_VERSION} or later is required...")
     endif()
 
-    # Retrieve the theme repository
-
-    include(FetchContent)
-
-    FetchContent_Declare(sphinx-theme
-        GIT_REPOSITORY https://github.com/opencor/sphinx-theme
-        SOURCE_DIR "${CMAKE_BINARY_DIR}/theme"
-    )
-
-    FetchContent_Populate(sphinx-theme)
-
     # Build the documentation for OpenCOR
 
     string(TIMESTAMP SPHINX_YEAR "%Y")
