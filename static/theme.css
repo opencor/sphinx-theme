@@ -27,6 +27,7 @@ a.image-reference {
     display: table;
 }
 
+a.nonclickable,
 a.toolbar {
     pointer-events: none;
 }
