@@ -184,6 +184,12 @@ span.math {
     color: rgb(103, 103, 103);
 }
 
+span.subitalic {
+    font-style: italic;
+    font-size: 0.83em;
+    vertical-align: sub;
+}
+
 table.highlighttable {
     border-spacing: 0px;
 }
