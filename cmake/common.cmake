@@ -41,14 +41,6 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
         html_show_copyright\ =\ False\n
     )
 
-    if(NOT "${ARGN}" STREQUAL "")
-        set(APPEND_CSS_FILE_COMMAND
-            COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_BINARY_DIR}/theme/cmake/appendfile.py"
-                                         "${CMAKE_BINARY_DIR}/html/_static/theme.css"
-                                         "${ARGN}"
-        )
-    endif()
-
     add_custom_target(Sphinx ALL
                       COMMAND ${SPHINX_EXECUTABLE} -q -b html
                                                    -c "${CMAKE_BINARY_DIR}"
@@ -58,6 +50,5 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
                                                    "${CMAKE_BINARY_DIR}/html/_static/theme.css"
                                                    "103, 103, 103"
                                                    "${R}, ${G}, ${B}"
-                      ${APPEND_CSS_FILE_COMMAND}
                       COMMENT "Building the ${DOCUMENTATION_NAME} documentation for OpenCOR")
 endmacro()
