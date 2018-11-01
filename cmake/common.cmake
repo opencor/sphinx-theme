@@ -1,7 +1,7 @@
 macro(build_documentation DOCUMENTATION_NAME R G B)
     # Make sure that Sphinx is available and that it is at least version 1.4
 
-    list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+    list(APPEND CMAKE_MODULE_PATH "${CMAKE_BINARY_DIR}/theme/cmake")
 
     if(NOT PYTHON_EXECUTABLE)
         find_package(PythonInterp REQUIRED QUIET)
