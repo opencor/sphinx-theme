@@ -27,6 +27,7 @@ a.image-reference {
     display: table;
 }
 
+a.icon,
 a.nonclickable,
 a.toolbar {
     pointer-events: none;
@@ -157,6 +158,7 @@ img.align-center:hover {
     background: rgba(103, 103, 103, 0.05);
 }
 
+img.icon,
 img.toolbar {
     padding: 3px 13px;
 }
