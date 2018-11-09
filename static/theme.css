@@ -29,7 +29,7 @@ a.image-reference {
 
 a.icon,
 a.nonclickable,
-a.toolbar {
+a.toolBar {
     pointer-events: none;
 }
 
@@ -159,7 +159,7 @@ img.align-center:hover {
 }
 
 img.icon,
-img.toolbar {
+img.toolBar {
     padding: 3px 13px;
 }
 
