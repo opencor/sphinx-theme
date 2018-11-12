@@ -28,7 +28,7 @@ a.image-reference {
 }
 
 a.icon,
-a.nonclickable,
+a.inlineicon,
 a.toolbar {
     pointer-events: none;
 }
