@@ -163,6 +163,10 @@ img.toolbar {
     padding: 3px 13px;
 }
 
+img.inlineicon {
+    vertical-align: baseline;
+}
+
 li > p {
     margin: 0px;
 }
