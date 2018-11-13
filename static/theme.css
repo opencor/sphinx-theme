@@ -164,7 +164,7 @@ img.toolbar {
 }
 
 img.inlineicon {
-    vertical-align: baseline;
+    vertical-align: -2px;
 }
 
 li > p {
