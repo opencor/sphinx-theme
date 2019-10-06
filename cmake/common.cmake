@@ -18,7 +18,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
                     ERROR_STRIP_TRAILING_WHITESPACE)
 
     string(REGEX REPLACE "^.* " ""
-           SPHINX_VERSION "${SPHINX_OUTPUT}${SPHINX_ERROR}")
+           SPHINX_VERSION "${SPHINX_OUTPUT}")
 
     set(MINIMUM_SPHINX_VERSION 1.4)
 
