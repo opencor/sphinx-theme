@@ -13,12 +13,11 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
 
     execute_process(COMMAND ${SPHINX_EXECUTABLE} --version
                     OUTPUT_VARIABLE SPHINX_OUTPUT
-                    ERROR_VARIABLE SPHINX_ERROR
                     OUTPUT_STRIP_TRAILING_WHITESPACE
                     ERROR_STRIP_TRAILING_WHITESPACE)
 
     string(REGEX REPLACE "^.* " ""
-           SPHINX_VERSION "${SPHINX_OUTPUT}${SPHINX_ERROR}")
+           SPHINX_VERSION "${SPHINX_OUTPUT}")
 
     set(MINIMUM_SPHINX_VERSION 1.4)
 
