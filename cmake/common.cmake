@@ -8,7 +8,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
     endif()
 
     if(NOT SPHINX_EXECUTABLE)
-        find_package(Sphinx REQUIRED QUIET)
+        find_program(SPHINX_EXECUTABLE NAMES ${PREFERRED_SPHINX_NAMES} sphinx-build sphinx-build2)
     endif()
 
     execute_process(COMMAND ${SPHINX_EXECUTABLE} --version
