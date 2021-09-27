@@ -1,5 +1,5 @@
 body {
-    padding: 13px 0px;
+    padding: 13px 0;
     background-color: rgb(255, 255, 255);
     font-family: "Arial", "Sans-Serif";
     font-size: 10pt;
@@ -7,11 +7,11 @@ body {
 
 a {
     color: rgb(103, 103, 103);
-    outline: 0px;
+    outline: 0;
     text-decoration: none;
 }
 
-a:hover {
+a:focus, a:hover {
     margin: -1px;
     border: 1px solid rgba(103, 103, 103, 0.13);
     background-color: rgba(103, 103, 103, 0.05);
@@ -23,8 +23,8 @@ a.headerlink {
 }
 
 a.image-reference {
-    margin: 0px auto;
-    border: 0px;
+    margin: 0 auto;
+    border: 0;
     display: table;
 }
 
@@ -40,8 +40,8 @@ code {
 
 div.copyright {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 19px;
     border-top: 1px solid rgba(161, 161, 161, 0.39);
@@ -72,21 +72,21 @@ div.copyright div.right {
 }
 
 div.copyright div a.copyright:hover {
-    margin: 0px;
-    border: 0px;
+    margin: 0;
+    border: 0;
     background: none;
 }
 
 div.copyright div img.twitter {
     position: relative;
     top: -15px;
-    border: 0px;
+    border: 0;
 }
 
 div.copyright div img.vpr {
     position: relative;
     top: 1px;
-    border: 0px;
+    border: 0;
 }
 
 div.highlight {
@@ -95,10 +95,10 @@ div.highlight {
 
 h1 {
     padding: 3px;
-    margin: 0px;
+    margin: 0;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 23px;
     background-color: rgb(103, 103, 103);
@@ -108,7 +108,7 @@ h1 {
 }
 
 h2 {
-    margin: 1.5em 0em 0.5em 0em;
+    margin: 1.5em 0 0.5em 0;
     /* Note: the margin is so that it is rendered like a <p>, which is  */
     /*        necessary if we want to use a section at the beginning of */
     /*        a page (because of our fixed header at the top)...        */
@@ -119,7 +119,7 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0em 0.5em 0em;
+    margin: 1.5em 0 0.5em 0;
     /* Note: mimicking what has been done in h2... */
     color: rgb(103, 103, 103);
     font-size: 11pt;
@@ -144,7 +144,7 @@ img.align-center:hover {
 }
 
 li > p {
-    margin: 0px;
+    margin: 0;
 }
 
 pre {
@@ -163,36 +163,36 @@ span:empty:not([class]) {
 }
 
 table.highlighttable {
-    border-spacing: 0px;
+    border-spacing: 0;
 }
 
 table.highlighttable > tbody > tr > td.code {
-    padding: 0px;
+    padding: 0;
     width: 100%;
 }
 
 table.highlighttable > tbody > tr > td.code > div.highlight > pre {
-    margin-left: 0px;
-    border-left: 0px;
-    border-radius: 0px 2px 2px 0px;
+    margin-left: 0;
+    border-left: 0;
+    border-radius: 0 2px 2px 0;
     width: auto;
 }
 
 table.highlighttable > tbody > tr > td.linenos {
-    padding: 0px;
+    padding: 0;
     vertical-align: top;
 }
 
 table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
-    margin-right: 0px;
-    border-radius: 2px 0px 0px 2px;
+    margin-right: 0;
+    border-radius: 2px 0 0 2px;
     padding: 3px 7px;
     background-color: rgba(103, 103, 103, 0.15);
     color: rgb(103, 103, 103);
 }
 
 ul {
-    margin: 7px 0px;
+    margin: 7px 0;
 }
 
 ul > li {
@@ -205,5 +205,5 @@ ul.internal.reference > li > a.internal.reference:first-child {
 }
 
 ul > li > ul {
-    margin: 0px;
+    margin: 0;
 }
