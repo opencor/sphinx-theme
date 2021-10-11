@@ -1,21 +1,34 @@
+html {
+    --background-color: rgb(255, 255, 255);
+    --color: rgb(103, 103, 103);
+
+    --color-0_05: rgba(103, 103, 103, 0.05);
+    --color-0_13: rgba(103, 103, 103, 0.13);
+    --color-0_39: rgba(103, 103, 103, 0.39);
+
+    --footer-border-top: rgba(161, 161, 161, 0.39);
+    --footer-background-color: rgb(229, 229, 229);
+    --footer-color: rgb(161, 161, 161);
+}
+
 body {
     padding: 13px 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--background-color);
     font-family: "Arial", "Sans-Serif";
     font-size: 10pt;
 }
 
 a {
-    color: rgb(103, 103, 103);
+    color: var(--color);
     outline: 0;
     text-decoration: none;
 }
 
 a:focus, a:hover {
     margin: -1px;
-    border: 1px solid rgba(103, 103, 103, 0.13);
-    background-color: rgba(103, 103, 103, 0.05);
-    color: rgb(103, 103, 103);
+    border: 1px solid var(--color-0_13);
+    background-color: var(--color-0_05);
+    color: var(--color);
 }
 
 a.headerlink {
@@ -35,7 +48,7 @@ pre {
 }
 
 code {
-    color: rgb(103, 103, 103);
+    color: var(--color);
 }
 
 div.copyright {
@@ -44,9 +57,9 @@ div.copyright {
     left: 0;
     width: 100%;
     height: 19px;
-    border-top: 1px solid rgba(161, 161, 161, 0.39);
-    background-color: rgb(229, 229, 229);
-    color: rgb(161, 161, 161);
+    border-top: 1px solid var(--footer-border-top);
+    background-color: var(--footer-background-color);
+    color: var(--footer-color);
     font-size: 9pt;
     font-weight: bold;
 }
@@ -101,8 +114,8 @@ h1 {
     left: 0;
     width: 100%;
     height: 23px;
-    background-color: rgb(103, 103, 103);
-    color: rgb(255, 255, 255);
+    background-color: var(--color);
+    color: var(--background-color);
     font-size: 15pt;
     font-weight: bold;
 }
@@ -112,8 +125,8 @@ h2 {
     /* Note: the margin is so that it is rendered like a <p>, which is  */
     /*        necessary if we want to use a section at the beginning of */
     /*        a page (because of our fixed header at the top)...        */
-    border-bottom: 1px solid rgba(103, 103, 103, 0.39);
-    color: rgb(103, 103, 103);
+    border-bottom: 1px solid var(--color-0_39);
+    color: var(--color);
     font-size: 13pt;
     font-weight: bold;
 }
@@ -121,7 +134,7 @@ h2 {
 h3 {
     margin: 1.5em 0 0.5em 0;
     /* Note: mimicking what has been done in h2... */
-    color: rgb(103, 103, 103);
+    color: var(--color);
     font-size: 11pt;
     font-style: italic;
     font-weight: bold;
@@ -138,9 +151,9 @@ img.align-center {
 img.align-center:hover {
     margin-top: -1px;
     margin-bottom: -1px;
-    border: 1px solid rgba(103, 103, 103, 0.13);
+    border: 1px solid var(--color-0_13);
     border-radius: 7px;
-    background-color: rgba(103, 103, 103, 0.05);
+    background-color: var(--color-0_05);
 }
 
 li > p {
@@ -149,10 +162,10 @@ li > p {
 
 pre {
     margin: 3px 13px 3px 13px;
-    border: 1px solid rgba(103, 103, 103, 0.13);
+    border: 1px solid var(--color-0_13);
     border-radius: 2px;
     padding: 3px;
-    background-color: rgba(103, 103, 103, 0.05);
+    background-color: var(--color-0_05);
     overflow: auto;
 }
 
@@ -187,8 +200,8 @@ table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
     margin-right: 0;
     border-radius: 2px 0 0 2px;
     padding: 3px 7px;
-    background-color: rgba(103, 103, 103, 0.15);
-    color: rgb(103, 103, 103);
+    background-color: var(--color-0_13);
+    color: var(--color);
 }
 
 ul {
