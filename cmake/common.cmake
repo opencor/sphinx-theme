@@ -38,7 +38,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
     )
 
     add_custom_target(Sphinx ALL
-                      COMMAND ${SPHINX_EXECUTABLE} -q -c ${CMAKE_CURRENT_BINARY_DIR}
+                      COMMAND ${SPHINX_EXECUTABLE} -q -j auto -c ${CMAKE_CURRENT_BINARY_DIR}
                                                    ${CMAKE_CURRENT_SOURCE_DIR}/src
                                                    ${CMAKE_CURRENT_BINARY_DIR}/html
                       COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/stringreplace.py
