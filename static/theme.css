@@ -106,6 +106,21 @@ div.highlight {
     background: none;
 }
 
+div.highlight > pre {
+    /* For the latest version of Sphinx */
+    padding: 0;
+    line-height: normal;
+}
+
+div.highlight > pre > span.linenos {
+    /* For the latest version of Sphinx */
+    margin-right: 3px;
+    padding: 0 9px;
+    border-right: 1px solid var(--color-0_05);
+    background-color: var(--color-0_05);
+    color: var(--color);
+}
+
 h1 {
     padding: 3px;
     margin: 0;
@@ -176,32 +191,44 @@ span:empty:not([class]) {
 }
 
 table.highlighttable {
+    /* For the OpenCOR version of Sphinx */
     border-spacing: 0;
 }
 
 table.highlighttable > tbody > tr > td.code {
+    /* For the OpenCOR version of Sphinx */
     padding: 0;
     width: 100%;
 }
 
 table.highlighttable > tbody > tr > td.code > div.highlight > pre {
-    margin-left: 0;
+    /* For the OpenCOR version of Sphinx */
+    margin: 0 13px 0 0;
     border-left: 0;
     border-radius: 0 2px 2px 0;
+    padding-left: 3px;
     width: auto;
 }
 
 table.highlighttable > tbody > tr > td.linenos {
+    /* For the OpenCOR version of Sphinx */
     padding: 0;
     vertical-align: top;
 }
 
 table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
-    margin-right: 0;
+    /* For the OpenCOR version of Sphinx */
+    margin: 0 0 0 13px;
     border-radius: 2px 0 0 2px;
-    padding: 3px 7px;
+    padding: 0;
+    line-height: normal;
     background-color: var(--color-0_13);
     color: var(--color);
+}
+
+table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre > span.normal {
+    /* For the OpenCOR version of Sphinx */
+    padding: 0 9px;
 }
 
 ul {
