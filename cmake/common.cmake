@@ -29,7 +29,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
     execute_process(COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/src/conf.py
                                                      ${CMAKE_CURRENT_BINARY_DIR}/conf.py)
 
-    file(APPEND "${CMAKE_CURRENT_BINARY_DIR}/conf.py"
+    file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/conf.py
         \n
         copyright\ =\ u'2011-${SPHINX_YEAR},\ University\ of\ Auckland'\n
         html_theme\ =\ 'theme'\n
@@ -39,11 +39,11 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
 
     add_custom_target(Sphinx ALL
                       COMMAND ${SPHINX_EXECUTABLE} -q -b html
-                                                   -c "${CMAKE_CURRENT_BINARY_DIR}"
-                                                   "${CMAKE_CURRENT_SOURCE_DIR}/src"
-                                                   "${CMAKE_CURRENT_BINARY_DIR}/html"
-                      COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/stringreplace.py"
-                                                   "${CMAKE_CURRENT_BINARY_DIR}/html/_static/theme.css"
+                                                   -c ${CMAKE_CURRENT_BINARY_DIR}
+                                                   ${CMAKE_CURRENT_SOURCE_DIR}/src
+                                                   ${CMAKE_CURRENT_BINARY_DIR}/html
+                      COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/stringreplace.py
+                                                   ${CMAKE_CURRENT_BINARY_DIR}/html/_static/theme.css
                                                    "103, 103, 103"
                                                    "${R}, ${G}, ${B}"
                       COMMENT "Building the ${DOCUMENTATION_NAME} documentation for OpenCOR")
