@@ -121,6 +121,10 @@ div.highlight > pre > span.linenos {
     color: var(--color);
 }
 
+div.line-block {
+    margin: 1em 0;
+}
+
 h1 {
     padding: 3px;
     margin: 0;
