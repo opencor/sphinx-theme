@@ -134,6 +134,7 @@ div.line-block {
 }
 
 h1 {
+    z-index: 999;
     padding: 3px;
     margin: 0;
     position: fixed;
