@@ -1,5 +1,5 @@
 macro(build_documentation DOCUMENTATION_NAME R G B)
-    # Make sure that Sphinx is available and that it is at least version 1.4
+    # Make sure that Sphinx is available and that it is at least version 1.4.
 
     if(NOT PYTHON_EXECUTABLE)
         find_package(PythonInterp REQUIRED QUIET)
@@ -22,7 +22,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
         message(FATAL_ERROR "Sphinx ${MINIMUM_SPHINX_VERSION} or later is required...")
     endif()
 
-    # Build the documentation for OpenCOR
+    # Build the documentation for [lib]OpenCOR.
 
     string(TIMESTAMP SPHINX_YEAR "%Y")
 

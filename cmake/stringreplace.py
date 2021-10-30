@@ -17,38 +17,23 @@
 #
 ################################################################################
 
-################################################################################
-#
-# String replace
-#
-################################################################################
-
-#!/usr/bin/env python
-
-################################################################################
 
 import sys
 
-################################################################################
-
 if __name__ == "__main__":
-    # Make sure that a file name and two strings have been provided
+    # Make sure that a file name and two strings have been provided.
 
     if len(sys.argv) != 4:
-        print("Usage: "+sys.argv[0]+" <filename> <fromString> <toString>")
+        print("Usage: " + sys.argv[0] + " <filename> <fromString> <toString>")
 
         exit()
 
-    # Retrieve the contents of the given file
+    # Retrieve the contents of the given file.
 
     with open(sys.argv[1]) as file:
         fileContents = file.read()
 
-    # Update the contents of the given file
+    # Update the contents of the given file.
 
     with open(sys.argv[1], "w") as file:
         file.write(fileContents.replace(sys.argv[2], sys.argv[3]))
-
-################################################################################
-# End of file
-################################################################################

@@ -17,34 +17,19 @@
 #
 ################################################################################
 
-################################################################################
-#
-# Append file
-#
-################################################################################
-
-#!/usr/bin/env python
-
-################################################################################
 
 import sys
 
-################################################################################
-
 if __name__ == "__main__":
-    # Make sure that two file names have been provided
+    # Make sure that two file names have been provided.
 
     if len(sys.argv) != 3:
-        print("Usage: "+sys.argv[0]+" <filename> <otherFilename>")
+        print("Usage: " + sys.argv[0] + " <filename> <otherFilename>")
 
         exit()
 
-    # Append the other file to the given file
+    # Append the other file to the given file.
 
     with open(sys.argv[1], "a") as file:
         with open(sys.argv[2]) as otherFile:
             file.write(otherFile.read())
-
-################################################################################
-# End of file
-################################################################################
