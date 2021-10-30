@@ -1,14 +1,22 @@
-html {
+:root {
     --background-color: rgb(255, 255, 255);
-    --color: rgb(103, 103, 103);
+    --color: rgb(54, 96, 146);
 
-    --color-0_05: rgba(103, 103, 103, 0.05);
-    --color-0_13: rgba(103, 103, 103, 0.13);
-    --color-0_39: rgba(103, 103, 103, 0.39);
+    --color-0_05: rgb(245, 247, 249); /* rgba(54, 96, 146, 0.05); */
+    --color-0_13: rgb(228, 234, 242); /* rgba(54, 96, 146, 0.13); */
+    --color-0_39: rgb(174, 193, 215); /* rgba(54, 96, 146, 0.39); */
 
-    --footer-border-top: rgba(161, 161, 161, 0.39);
+    --footer-border-top: rgb(209, 208, 208); /* rgba(136, 133, 133, 0.39); */
     --footer-background-color: rgb(229, 229, 229);
     --footer-color: rgb(161, 161, 161);
+
+    --tabs--label-text: var(--footer-color);
+    --tabs--label-text--active: var(--color);
+    --tabs--label-text--hover: var(--color);
+    --tabs--label-background--active: transparent;
+    --tabs--label-background--hover: var(--color-0_05);
+    --tabs--border: var(--color-0_13);
+    --tabs--border--active: var(--tabs--label-text--active);
 }
 
 body {
