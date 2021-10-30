@@ -115,7 +115,6 @@ div.highlight {
 }
 
 div.highlight > pre {
-    padding: 0;
     /* For the latest version of Sphinx. */
     line-height: normal;
 }
