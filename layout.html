@@ -12,10 +12,35 @@
         <link href="{{ pathto('_static/tabs.css', 1) }}" rel="stylesheet" type="text/css" />
         <link href="{{ pathto('_static/theme.css', 1) }}" rel="stylesheet" type="text/css" />
 
-        <script src="{{ pathto('_static/clipboard.min.js', 1) }}" type="text/javascript"></script>
-        <script src="{{ pathto('_static/copybutton.js', 1) }}" type="text/javascript"></script>
-        <script src="{{ pathto('_static/jquery.js', 1) }}" type="text/javascript"></script>
-        <script src="{{ pathto('_static/tabs.js', 1) }}" type="text/javascript"></script>
+        {%- set (_ver_major, _ver_minor, _ver_bugfix) = sphinx_version.split('.') | map('int') -%}
+        {%- set sphinx_version_info = (_ver_major, _ver_minor, _ver_bugfix) -%}
+
+        {%- if sphinx_version_info >= (1, 8) -%}
+            {%- if sphinx_version_info < (4, 0) -%}
+                <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+            {%- endif -%}
+
+            {%- for scriptfile in script_files %}
+                {{ js_tag(scriptfile) }}
+            {%- endfor %}
+        {%- else %}
+            <script>
+                var DOCUMENTATION_OPTIONS = {
+                    URL_ROOT:'{{ url_root }}',
+                    VERSION:'{{ release|e }}',
+                    LANGUAGE:'{{ language }}',
+                    COLLAPSE_INDEX:false,
+                    FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
+                    HAS_SOURCE:  {{ has_source|lower }},
+                    SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+                };
+            </script>
+
+            {%- for scriptfile in script_files %}
+                <script src="{{ pathto(scriptfile, 1) }}"></script>
+            {%- endfor %}
+        {%- endif %}
+
         <script src="{{ pathto('_static/theme.js', 1) }}" type="text/javascript"></script>
 
         <link href="{{ pathto('_static/katex/katex.min.css', 1) }}" rel="stylesheet" type="text/css"/>
