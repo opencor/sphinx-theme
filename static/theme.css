@@ -252,6 +252,10 @@ table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre > span.norm
     padding: 0 9px;
 }
 
+table.mathematics button.copybtn {
+    right: 0.45em;
+}
+
 ul {
     margin: 7px 0;
 }
