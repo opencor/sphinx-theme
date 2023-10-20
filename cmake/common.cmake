@@ -1,8 +1,8 @@
 macro(build_documentation DOCUMENTATION_NAME R G B)
     # Make sure that Sphinx is available and that it is at least version 1.4.
 
-    if(NOT PYTHON_EXECUTABLE)
-        find_package(PythonInterp REQUIRED QUIET)
+    if(NOT Python_EXECUTABLE)
+        find_package(Python COMPONENTS Interpreter REQUIRED QUIET)
     endif()
 
     if(NOT SPHINX_EXECUTABLE)
@@ -41,7 +41,7 @@ macro(build_documentation DOCUMENTATION_NAME R G B)
                       COMMAND ${SPHINX_EXECUTABLE} -q -j auto -c ${CMAKE_CURRENT_BINARY_DIR}
                                                    ${CMAKE_CURRENT_SOURCE_DIR}/src
                                                    ${CMAKE_CURRENT_BINARY_DIR}/html
-                      COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/stringreplace.py
+                      COMMAND ${Python_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/stringreplace.py
                                                    ${CMAKE_CURRENT_BINARY_DIR}/html/_static/theme.css
                                                    "103, 103, 103"
                                                    "${R}, ${G}, ${B}"
